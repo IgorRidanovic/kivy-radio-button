@@ -1,0 +1,27 @@
+
+#:kivy 1.9.1
+
+<RadioButton>:
+	GridLayout:
+		cols: 2
+		size: root.size
+		
+		CheckBox:
+			id: rbutton1
+			group: 'radio button'
+			state: root.savedstate()[0]
+			on_press: root.switchstate1()
+
+		CheckBox:
+			id: rbutton2
+			group: 'radio button'
+			state: root.savedstate()[1]
+			on_press: root.switchstate2()
+
+		Label:
+			id: label1
+			text: root.slabel1
+
+		Label:
+			id: label2
+			text: root.slabel2
